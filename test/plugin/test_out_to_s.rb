@@ -10,7 +10,7 @@ class ToSOutputTest < Test::Unit::TestCase
 		field_name fname_fuga
 	]
 
-	def create_driver(conf = CONFIG, tag='test')
+	def create_driver(conf=CONFIG, tag='test')
 		Fluent::Test::OutputTestDriver.new(Fluent::ToSOutput, tag).configure(conf)
 	end
 

@@ -1,21 +1,13 @@
 class Fluent::ToSOutput < Fluent::Output
   Fluent::Plugin.register_output('to_s', self)
 
-  config_param :tag_prefix, :string, :default => ''
+  config_param :tag_prefix, :string, :default => 'to_s'
   config_param :field_name, :string, :default => 'to_s'
 
   def configure(conf)
     super
 
-    @prefix = "#{@tag_prefix}."
-    @tag_proc =
-      if !@tag_prefix.empty?
-        Proc.new {|tag| "#{@prefix}#{tag}"}
-      else
-        Proc.new {|tag| tag}
-      end
-    @to_s =
-      Proc.new {|record| record.to_s}
+    @tag_proc = Proc.new {|tag| "#{@tag_prefix}.#{tag}"}
   end
 
   def emit(tag, es, chain)
