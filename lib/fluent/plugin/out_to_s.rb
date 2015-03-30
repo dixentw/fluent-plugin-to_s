@@ -22,7 +22,6 @@ class Fluent::ToSOutput < Fluent::Output
     emit_tag = @tag_proc.call(tag)
 
     es.each do |time, record|
-      p record.to_s
       record[@field_name] = record.to_s
       Fluent::Engine.emit(emit_tag, time, record)
     end
