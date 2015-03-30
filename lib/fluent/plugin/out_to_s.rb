@@ -9,7 +9,7 @@ class Fluent::ToSOutput < Fluent::Output
 
     @prefix = "#{@tag_prefix}."
     @tag_proc =
-      if @tag_prefix
+      if !@tag_prefix.empty?
         Proc.new {|tag| "#{@prefix}#{tag}"}
       else
         Proc.new {|tag| tag}
