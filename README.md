@@ -1,4 +1,4 @@
-# fluent-plugin-to_s
+# fluent-plugin-to_s [![Gem Version](https://badge.fury.io/rb/fluent-plugin-to_s.svg)](http://badge.fury.io/rb/fluent-plugin-to_s)
 
 Plugin that adds whole record to to_s field
 
