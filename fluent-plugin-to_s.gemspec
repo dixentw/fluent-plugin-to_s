@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "fluent-plugin-to_js"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.3"
   spec.authors       = ["dixen"]
   spec.email         = ["dixentw@gmail.com"]
   spec.description   = %q{Plugin that adds whole record to to_s field, json format}

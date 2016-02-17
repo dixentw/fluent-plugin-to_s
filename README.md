@@ -12,7 +12,7 @@ gem install fluent-plugin-to_js
 
 ```xml
 <match test.**>
-  @type tojstr
+  @type tojs
   field_name to_string
 </match>
 ```
