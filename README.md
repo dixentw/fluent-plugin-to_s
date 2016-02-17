@@ -1,19 +1,18 @@
-# fluent-plugin-to_s [![Gem Version](https://badge.fury.io/rb/fluent-plugin-to_s.svg)](http://badge.fury.io/rb/fluent-plugin-to_s)
+# fluent-plugin-to_js [![Gem Version](https://badge.fury.io/rb/fluent-plugin-to_s.svg)](http://badge.fury.io/rb/fluent-plugin-to_s)
 
-Plugin that adds whole record to to_s field
+Plugin that adds whole record to (default) to_s field
 
 ## Installation
 
 ```bash
-gem install fluent-plugin-to_s
+gem install fluent-plugin-to_js
 ```
 
 ## Usage
 
 ```xml
 <match test.**>
-  type to_s
-  tag_prefix string
+  @type tojstr
   field_name to_string
 </match>
 ```

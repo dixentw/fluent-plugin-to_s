@@ -1,7 +1,7 @@
 class Fluent::ToSFilter < Fluent::Filter
-  Fluent::Plugin.register_filter('to_jstr', self)
+  Fluent::Plugin.register_filter('toJstr', self)
 
-  config_param :field_name, :string, :default => 'to_s'
+  config_param :field_name, :string, :default => 'to_json'
 
   def configure(conf)
     super
